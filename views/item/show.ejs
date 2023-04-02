@@ -1,0 +1,31 @@
+<%- include('../partials/header.ejs') %>
+<div class="content">
+    <div class=" center-container">
+
+        <div class="">
+           
+                <div class="col-md-30 ">
+                    <div class="card card-style mx-auto" style="width: 20rem;">
+                        <img class="" src="<%= item.image %>" alt="poster">
+    
+                        <div class="card-body">
+                            <h4 class="card-title"><%=item.title%></h4>
+                            <h5 class="director"><%=item.director%></h5> 
+                            <h6 class="director">Synopsis:</h6>
+                            <p><%=item.content%></p>
+                            <h6 class="director"><%=item.status%></h6>
+                            <small> Posted <%=item.createdAt%></small>
+                            <form>
+                                <div class="float-left">
+                                    <button class="button update-btn" type="submit" formmethod="GET" formaction="/items/<%= item.id %>/edit">Edit</button>
+                                    <button class="button delete-btn" type="submit" formmethod="POST" formaction="/items/<%= item.id %>?_method=DELETE">Delete</button>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>    
+    
+<%- include('../partials/footer.ejs')%>         
