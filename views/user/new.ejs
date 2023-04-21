@@ -1,0 +1,38 @@
+<%- include('../partials/header.ejs') %>
+<div class="content">
+    <div class="center-container">
+        <form action='/users' method="POST">
+            <div class="content">
+                <label for="firstName"><strong> First Name</strong></label>
+                <span>
+                    <input type="text" id= "firstName" name="firstName" class="form-control" placeholder="First Name" required>
+                </span>    
+            
+            
+                <label for="lastName"><strong> Last Name</strong></label>
+                <span>
+                    <input type="text" id= "lasttName"  name="lastName" class="form-control" placeholder="Last Name" required>
+                </span>    
+            
+            
+                <label for="Email"> <strong> E-mail</strong></label>
+                <span>
+                    <input type="text" name="email" class="form-control" placeholder="E-mail" required>
+                </span>    
+            
+            
+                <label for="password"><strong>Password</strong></label>
+                <span>
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                </span>    
+            
+                <button class="button submit-btn ">Register</button>
+            </div>    
+            
+
+        
+
+        </form>
+    </div>
+</div>
+<%- include('../partials/footer.ejs') %>

@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const itemSchema = new Schema({
     category: {type: String, required: [true, 'Category is required']},
     title: {type: String, required: [true, 'Product Name is required']},
+    author: {type: Schema.Types.ObjectId, ref:'User'},
     director: {type: String, required: [true, 'Director Name is required']},
     content: {type: String, required: [true, 'Content is required'], 
             minLength: [10, 'The content should have at least 10 characters']},

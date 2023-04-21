@@ -14,11 +14,14 @@
                             <h6 class="director">Synopsis:</h6>
                             <p><%=item.content%></p>
                             <h6 class="director"><%=item.status%></h6>
-                            <small> Posted <%=item.createdAt%></small>
+                            <small> Posted <%=item.createdAt.toLocaleString()%> by <%= item.author.firstName + ' ' + item.author.lastName%></small>
                             <form>
+                                <% if(user == item.author._id) { %>
                                 <div class="float-left">
+
                                     <button class="button update-btn" type="submit" formmethod="GET" formaction="/items/<%= item.id %>/edit">Edit</button>
                                     <button class="button delete-btn" type="submit" formmethod="POST" formaction="/items/<%= item.id %>?_method=DELETE">Delete</button>
+                                 <% } %>
                                 </div>
                             </form>
                     </div>

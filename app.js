@@ -2,8 +2,12 @@ const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
+const flash = require('connect-flash');
 const mainRoutes = require('./routes/mainRoute');
 const itemRoutes = require('./routes/itemRoutes');
+const userRoutes = require('./routes/userRoutes');
 
 //create app
 const app =express();
@@ -33,12 +37,35 @@ app.use(express.urlencoded({extended: true}));
 app.use(morgan('tiny'));
 app.use(methodOverride('_method'));
 
-app.get('/',(req, res)=>{
-    res.render('index');
-});
+app.use(
+    session({
+        secret: "qwuehuweheu1u323ublkoylt",
+        resave: false,
+        saveUninitialized: false,
+        store: new MongoStore({mongoUrl: 'mongodb://localhost:27017/trade'}),
+        cookie: {maxAge: 60*60*1000}
+        })
+  );
+
+  app.use(flash());
+  app.use((req, res, next) => {
+    //console.log(req.session);
+    res.locals.user = req.session.user||null;
+    res.locals.firstName = req.session.firstName||null;
+    res.locals.lastName = req.session.lastName||null;
+    res.locals.errorMessages = req.flash('error');
+    res.locals.successMessages = req.flash('success');
+    next();
+  });
 
 app.use('/', mainRoutes);
 app.use('/items', itemRoutes);
+app.use('/users',userRoutes);
+app.use('/connections',itemRoutes);
+
+
+
+
 
 app.use((req, res, next) => {
     let err = new Error('The server cannot locate '+ req.url);

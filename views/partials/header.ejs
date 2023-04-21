@@ -15,7 +15,7 @@
 
         <nav class="navbar navbar-expand-md ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/">Niner Film Trade
+                <a class="navbar-brand" href="/" style="color: white";  >Niner Film Trade
                     <img src="/imgs/reel.png" alt="reel">
                 </a>
                 <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#CollapsibleNavbar">
@@ -23,16 +23,29 @@
                 </button>
                 <div class="collapse navbar-collapse" id="#CollapsibleNavbar">
                     <ul class="navbar-nav ml-auto">
+                        <% if(!user){ %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/users/login">Login</a>
+                            </li>
+                          
+                            <li class="nav-item">
+                                <a class="nav-link" href="/users/new">Signup</a>
+                            </li>
+                        <% } else { %>
                         <li class="nav-item">
                             <a class="nav-link" href="/items/new">Start New Trade</a>
                         </li>
+                        
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
+                            <a class="nav-link" href="/users/profile">Profile</a>
                         </li>
+                        
                         <li class="nav-item">
-                            <a class="nav-link" href="#">SignUp</a>
+                            <a class="nav-link" href="/users/logout">Logout</a>
                         </li>
+                        <% } %>
                     </ul>
+                    
                 </div>
             </div>   
         </nav>
@@ -43,3 +56,23 @@
                 </li>
             </ul>
         </nav>
+
+
+        <% if(errorMessages.length > 0) {%>
+            <% errorMessages.forEach(message=>{%>
+                <div class='error'>
+                    <%=message%>
+                </div>
+            <%});%>
+        <%}%>
+        
+        <% if(successMessages.length > 0) {%>
+            <% successMessages.forEach(message=>{%>
+                <div class='success'>
+                    <%=message%>
+                </div>
+            <%});%>
+        <%}%>
+
+
+

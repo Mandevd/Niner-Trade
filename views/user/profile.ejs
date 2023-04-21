@@ -1,0 +1,39 @@
+
+<%- include('../partials/header.ejs')%>
+<div class="table-container">
+    <div class="event-heading">
+      <h3 class="dis-in-bl"><%=user.firstName%>'s Trades</h3>
+  </div>
+  <% if(connections.length){ %>
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Trades</th>
+              <th scope="col">Category</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% connections.forEach(connection => { %>
+              <tr>
+                  <td><a href="/connections/<%= connection.id %>"><%= connection.title %></a></td>
+                  <td><%= connection.category %></td>
+                  <td>
+                      <form style="float: left;">
+                          <button class="button update-btn" type="submit" formmethod="GET" formaction="/connections/<%= connection._id %>/edit">Edit</button>
+                          <button class="button delete-btn" type="submit" formmethod="POST" formaction="/connections/<%= connection._id %>?_method=DELETE">Delete</button>
+                      </form>
+                  </td>
+              </tr>
+              <% }); %>
+          </tbody>
+        </table>
+        <% } else { %>
+            <p style="margin: 20px auto;width: 95%;">There are no Trades to display.</p>
+        <% } %>
+    </div>
+</div>
+</div>
+<%- include('../partials/footer.ejs')%>
