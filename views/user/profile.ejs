@@ -6,11 +6,12 @@
       <h3 class="dis-in-bl"><%=user.firstName%>'s Trades</h3>
   </div>
   <% if(connections.length){ %>
-    <div class="row">
+    <div class="row-26">
+     <div class = "center-container-table">
       <div class="col-12">
-        <table class="table table-bordered">
+        <table  class="table table-bordered">
           <thead>
-            <tr>
+            <tr style="height:20px">
               <th scope="col">Trades</th>
               <th scope="col">Category</th>
               <th scope="col">Status</th>
@@ -19,7 +20,7 @@
           </thead>
           <tbody>
             <% connections.forEach(connection => { %>
-              <tr>
+              <tr style="height:2px">
                   <td><a href="/connections/<%= connection.id %>"><%= connection.title %></a></td>
                   <td><%= connection.category %></td>
                   <td><%= connection.status %></td>
@@ -38,6 +39,7 @@
             <p style="margin: 20px auto;width: 95%;">There are no Trades to display.</p>
         <% } %>
     </div>
+  </div>
 </div>
 </div>
 <%- include('../partials/footer.ejs')%>
