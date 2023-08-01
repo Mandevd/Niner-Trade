@@ -1,0 +1,288 @@
+[{
+  "_id": {
+    "$oid": "645b8113dd33ad0fc6a80bdc"
+  },
+  "watchBy": [],
+  "category": "Science Fiction",
+  "title": "Akira",
+  "director": "Katsuhiro Otomo",
+  "content": "A secret military project endangers Neo-Tokyo when it turns a biker gang member into a rampaging psychic psychopath who can only be stopped by a teenager, his gang of biker friends and a group of psychics.",
+  "image": "https://i.postimg.cc/nhFc1Lfv/akira.jpg",
+  "status": "Traded",
+  "author": {
+    "$oid": "645b803fee1fce0c8091e7e0"
+  },
+  "createdAt": {
+    "$date": "2023-05-10T11:33:39.334Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-10T16:52:28.201Z"
+  },
+  "__v": 0,
+  "offerId": {
+    "$oid": "645bcb8255c1441eaf635926"
+  }
+},{
+  "_id": {
+    "$oid": "645b820edd33ad0fc6a80c0e"
+  },
+  "watchBy": [],
+  "category": "Science Fiction",
+  "title": "A Clockwork Orange",
+  "director": "Stanley Kubrick",
+  "content": "In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment, but it does not go as planned.",
+  "image": "https://i.postimg.cc/LXVK0tpv/cw.jpg",
+  "status": "Available",
+  "author": {
+    "$oid": "645b803fee1fce0c8091e7e0"
+  },
+  "createdAt": {
+    "$date": "2023-05-10T11:37:50.781Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-10T11:38:08.611Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645b8256dd33ad0fc6a80c22"
+  },
+  "watchBy": [],
+  "category": "Science Fiction",
+  "title": "2001: A Space Odyssey",
+  "director": "Stanley Kubrick",
+  "content": "After uncovering a mysterious artifact buried beneath the Lunar surface, a spacecraft is sent to Jupiter to find its origins - a spacecraft manned by two men and the supercomputer H.A.L. 9000.",
+  "image": "https://i.postimg.cc/jjWptVrW/2001.jpg",
+  "status": "Available",
+  "author": {
+    "$oid": "645b803fee1fce0c8091e7e0"
+  },
+  "createdAt": {
+    "$date": "2023-05-10T11:39:02.712Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-10T11:39:14.694Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645b82e9dd33ad0fc6a80c49"
+  },
+  "watchBy": [],
+  "category": "Horror",
+  "title": "Psycho",
+  "director": "Alfred Hitchcock",
+  "content": "A Phoenix secretary embezzles $40,000 from her employers client, goes on the run and checks into a remote motel run by a young man under the domination of his mother.",
+  "image": "https://i.postimg.cc/G3SS37qG/p1.jpg",
+  "status": "Available",
+  "author": {
+    "$oid": "645b8281dd33ad0fc6a80c42"
+  },
+  "createdAt": {
+    "$date": "2023-05-10T11:41:29.764Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-10T11:41:39.440Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645b8337dd33ad0fc6a80c57"
+  },
+  "watchBy": [],
+  "category": "Horror",
+  "title": "The Shining",
+  "director": "Stanley Kubrick",
+  "content": "A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future.",
+  "image": "https://i.postimg.cc/63qy9ppr/shining.jpg",
+  "status": "Traded",
+  "author": {
+    "$oid": "645b8281dd33ad0fc6a80c42"
+  },
+  "createdAt": {
+    "$date": "2023-05-10T11:42:47.775Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-10T17:18:39.134Z"
+  },
+  "__v": 0,
+  "offerId": {
+    "$oid": "645bcd5e55c1441eaf63595e"
+  }
+},{
+  "_id": {
+    "$oid": "645b8383dd33ad0fc6a80c63"
+  },
+  "watchBy": [],
+  "category": "Horror",
+  "title": "The Silence Of the Lambs",
+  "director": "Jonathan Demme",
+  "content": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+  "image": "https://i.postimg.cc/63cNqrTg/sl.jpg",
+  "status": "Available",
+  "author": {
+    "$oid": "645b8281dd33ad0fc6a80c42"
+  },
+  "createdAt": {
+    "$date": "2023-05-10T11:44:03.207Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-10T11:44:14.519Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645b84d2dd33ad0fc6a80c76"
+  },
+  "watchBy": [],
+  "category": "Absurd/Adventure",
+  "title": "Everything Everywhere All at Once",
+  "director": "Daniel Kwan",
+  "content": "A middle-aged Chinese immigrant is swept up into an insane adventure in which she alone can save existence by exploring other universes and connecting with the lives she could have led.",
+  "image": "https://i.postimg.cc/PrSVtJ5Z/e.png",
+  "status": "Available",
+  "author": {
+    "$oid": "645b803fee1fce0c8091e7e0"
+  },
+  "createdAt": {
+    "$date": "2023-05-10T11:49:38.404Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-10T11:49:47.395Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645b8698dd33ad0fc6a80c84"
+  },
+  "watchBy": [],
+  "category": "Absurd/Adventure",
+  "title": "Borat",
+  "director": " Larry Charles",
+  "content": "Kazakh TV talking head Borat is dispatched to the United States to report on the greatest country in the world. With a documentary crew in tow, Borat becomes more interested in locating and marrying Pamela Anderson.",
+  "image": "https://i.ibb.co/zNMyyN1/borat.jpg",
+  "status": "Available",
+  "author": {
+    "$oid": "645b803fee1fce0c8091e7e0"
+  },
+  "createdAt": {
+    "$date": "2023-05-10T11:57:12.565Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-10T12:15:11.367Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645b8a68dd33ad0fc6a80cae"
+  },
+  "watchBy": [],
+  "category": "Absurd/Adventure",
+  "title": "The Lobster",
+  "director": "Yorgos Lanthimos",
+  "content": "In a dystopian near future, according to the laws of The City, single people are taken to The Hotel, where they are obliged to find a romantic partner in 45 days or they're transformed into beasts and sent off into The Woods.",
+  "image": "https://i.ibb.co/qDQYJqp/lobster.jpg",
+  "status": "Traded",
+  "author": {
+    "$oid": "645b803fee1fce0c8091e7e0"
+  },
+  "createdAt": {
+    "$date": "2023-05-10T12:13:28.437Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-10T17:18:39.134Z"
+  },
+  "__v": 0,
+  "offerId": {
+    "$oid": "645bcd5e55c1441eaf63595e"
+  }
+},{
+  "_id": {
+    "$oid": "645b8b52dd33ad0fc6a80ce3"
+  },
+  "watchBy": [
+    "645b803fee1fce0c8091e7e0"
+  ],
+  "category": "Drama",
+  "title": "There Will Be Blood",
+  "director": " Paul Thomas Anderson",
+  "content": "A story of family, religion, hatred, oil and madness, focusing on a turn-of-the-century prospector in the early days of the business.",
+  "image": "https://i.ibb.co/59PjmP5/bb.webp",
+  "status": "Available",
+  "author": {
+    "$oid": "645b8281dd33ad0fc6a80c42"
+  },
+  "createdAt": {
+    "$date": "2023-05-10T12:17:22.835Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-10T16:59:15.175Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645b8cf2dd33ad0fc6a80d11"
+  },
+  "watchBy": [],
+  "category": "Drama",
+  "title": "The Shawshank Redemption",
+  "director": "Frank Darabont",
+  "content": "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
+  "image": "https://i.ibb.co/WKdBR5Z/a.webp",
+  "status": "Available",
+  "author": {
+    "$oid": "645b8281dd33ad0fc6a80c42"
+  },
+  "createdAt": {
+    "$date": "2023-05-10T12:24:18.411Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-10T12:24:28.756Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645b8db3dd33ad0fc6a80d1d"
+  },
+  "watchBy": [],
+  "category": "Drama",
+  "title": "Forrest Gump",
+  "director": "Robert Zemeckis",
+  "content": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+  "image": "https://i.ibb.co/PY1xpMF/a2.jpg",
+  "status": "Available",
+  "author": {
+    "$oid": "645b8281dd33ad0fc6a80c42"
+  },
+  "createdAt": {
+    "$date": "2023-05-10T12:27:31.126Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-10T12:27:54.068Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "645b8eb4dd33ad0fc6a80d38"
+  },
+  "watchBy": [],
+  "category": "Horror",
+  "title": "Hereditary",
+  "director": " Ari Aster",
+  "content": "A grieving family is haunted by tragic and disturbing occurrences.",
+  "image": "https://i.ibb.co/w4QWX4c/a3.jpg",
+  "status": "Traded",
+  "author": {
+    "$oid": "645b8281dd33ad0fc6a80c42"
+  },
+  "createdAt": {
+    "$date": "2023-05-10T12:31:48.596Z"
+  },
+  "updatedAt": {
+    "$date": "2023-05-10T16:52:28.201Z"
+  },
+  "__v": 0,
+  "offerId": {
+    "$oid": "645bcb8255c1441eaf635926"
+  }
+}]

@@ -1,0 +1,67 @@
+<%- include('../partials/header.ejs') %>
+<div class="content">
+    <div class=" center-container">
+
+        <div class="row">
+           
+                <div class="col-5">
+                    <div class="card" style="width: 25rem;">
+                        <img class="" src="<%= item.image %>" alt="poster">
+    
+                        <div class="card-body">
+                            <h4 class="card-title"><%=item.title%></h4>
+                            <h5 class="director"><%=item.director%></h5> 
+                            <h6 class="director">Synopsis:</h6>
+                            <p><%=item.content%></p>
+                            <% if(item.status==='Available') { %>
+                                <h6 class="available-color"><%=item.status%></h6>
+                                <%} %>
+                            <% if(item.status==='Offer Pending') { %>
+                                <h6 class="pending-color"><%=item.status%></h6>
+                                    <%} %>
+                            <% if(item.status==='Traded') { %>
+                                <h6 class="traded-color"><%=item.status%></h6>
+                                    <%}%>
+                            
+                            <small> Posted <%=item.createdAt.toLocaleString()%> by <%= item.author.firstName + ' ' + item.author.lastName%></small>
+                            <form>
+                                <% if(user == item.author._id) { %>
+                                <div class="float-left">
+
+                                    <button class="button update-btn" type="submit" formmethod="GET" formaction="/items/<%= item.id %>/edit">Edit</button>
+                                    <button class="button delete-btn" type="submit" formmethod="POST" formaction="/items/<%= item.id %>?_method=DELETE">Delete</button>
+                                  <% } %>
+                                </div>
+                            </form>
+                        </div>    
+                    </div>
+                
+
+                <div class="col-3">
+                    <% if(user != item.author._id) { %>
+                        <% if(item.status === 'Available') { %>
+                   <div class="card">
+                    
+                       <form>
+                        
+                         <h6 class="director"> Are you interested in this purchase?</h6>
+                         <button class="button update-btn" type="submit"  formmethod = "GET" formaction = "/items/<%=item.id%>/trade">Trade</button>
+                      
+                         <button class="button delete-btn" type="submit"  formmethod = "POST" formaction = "/items/<%=item.id%>/watch">Watch</button>
+                       
+                       </form>
+                       <%}%>
+                       <%}%>
+                       
+                    </div>        
+                </div>
+                
+        </div>
+        
+        
+
+       
+    </div>
+</div>    
+    
+<%- include('../partials/footer.ejs')%>         

@@ -1,0 +1,20 @@
+<%- include('../partials/header.ejs') %>
+<div class="content">
+    <div class="center-container">
+        <form action = '/users/login' method = 'POST' class="mt-20">
+            <label for="Email"> <strong> E-mail</strong></label>
+            <span>
+                <input type="text" name="email" class="form-control" placeholder="E-mail" required>
+            </span>    
+        
+        
+            <label for="password"><strong>Password</strong></label>
+            <span>
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
+            </span>    
+        
+            <button class="button submit-btn ">Login</button>
+        </form>
+    </div>
+</div>
+<%- include('../partials/footer.ejs') %>

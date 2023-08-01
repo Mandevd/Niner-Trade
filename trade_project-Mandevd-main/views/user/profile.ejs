@@ -1,0 +1,122 @@
+
+<%- include('../partials/header.ejs')%>
+<div class="table-container">
+    <div class="event-heading">
+      <h2>Welcome to Niner Film Trade</h2>
+      <h3 class="dis-in-bl"><%=user.firstName%>'s Trades</h3>
+  </div>
+  <% if(trades.length){ %>
+    <div class="row-26">
+     <div class = "center-container-table">
+      <div class="col-12">
+        <table  class="table table-bordered">
+          <thead>
+            <tr style="height:20px">
+              <th scope="col">Trade No.</th>
+              <th scope="col">Trades</th>
+              <th scope="col">Category</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% trades.forEach((trade,index) => { %>
+              <tr style="height:2px">
+                <td> <%=index + 1 %></td>
+                  <td><a href="/connections/<%= trade.id %>"><%= trade.title %></a></td>
+                  <td><%= trade.category %></td>
+                  <td><%= trade.status %></td>
+                  <td>
+                    <% if(trade.status!="Traded") { %>
+                      <form style="float: left;">
+                          <button class="button update-btn" type="submit" formmethod="GET" formaction="/connections/<%=trade.id%>/edit">Update</button> &nbsp; &nbsp;
+                          <button class="button delete-btn" type="submit" formmethod="POST" formaction="/connections/<%=trade.id%>?_method=DELETE">Delete</button>
+                          <% if(trade.status == "Offer Pending") { %>
+                              <button class="button update-btn" type="submit" formmethod="GET" formaction="/connections/<%=trade.offerId%>/manage">Manage Offer</button>
+                            <% } %>
+                    <% } %>
+                    </form>
+                </td>
+                  
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+        <% } else { %>
+            <p style="margin: 20px auto;width: 95%;">There are no Trades to display.</p>
+        <% }%>
+        <br>
+
+
+              <% if(offers.length) { %>
+                <h4> <b> Your Offers </b> </h4>
+           <table class="table table-bordered">
+              <thead>
+              <tr style="height:20px">
+                   <th scope="col">Trade Name</th>
+                   <th scope="col">Category</th>
+                   <th scope="col">Status</th>
+              </tr>
+              </thead>
+              <tbody> 
+                  <% offers.forEach((offerTrade, index) => { %>
+                  <tr style="height:2px">
+                      <td> <%=index + 1 %></td>
+                      <td>  <a href="/connections/<%=offerTrade.id%>"> <%=offerTrade.title %> </a></td>
+                      <td> <%=offerTrade.category%> </td>
+                      <td> <%=offerTrade.status%> </td>
+                      <td>
+                          <form>
+                              <button class="button delete-btn" type="submit" formmethod="POST" formaction="/connections/<%=offerTrade.offerId%>/cancelOffer?_method=DELETE">Cancel Offer </button>
+                          </form>
+                      </td>
+                    </tr>
+                      <%})%>
+              </tbody>
+             </table>  
+             <%}%>
+
+        <br>
+
+             
+        <% if(watchList.length) { %>
+          <h3>Your Watched Trades</h3>
+            <table class="table table-bordered" style="width:80%">
+                <thead>
+                    <tr>
+                      <th>Trade Number</th>
+                      <th>Trade Name</th>
+                      <th>Category</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                </thead>
+              <tbody>
+                  <% watchList.forEach((watchTrade, index) => { %>
+                  <tr>
+                        <td> <%=index + 1 %></td>
+                        <td>  <a href="/connections/<%=watchTrade.id%>"> <%=watchTrade.title %> </a></td>
+                        <td><%=watchTrade.category %></td>
+                        <td><%=watchTrade.status %></td>
+                        <td>
+                          <form>
+                            <button class="button delete-btn" type="submit" formmethod = "POST" formaction ="/connections/<%=watchTrade.id%>/unwatch?_method=PUT">Unwatch</button>
+                          </form>
+                        </td>
+                      </tr>
+                      <%}) %>
+               </tbody>
+           </table>  
+           <%}%>           
+        
+             
+
+
+
+
+
+      </div>
+   </div>
+ </div>
+</div>
+<%- include('../partials/footer.ejs')%>

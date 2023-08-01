@@ -1,0 +1,50 @@
+<%- include('../partials/header.ejs') %>
+<form action = '/items/<%= item.id%>?_method=PUT' method = 'POST' >
+    <div class="content">
+        <label for="category"><strong> Category</strong></label>
+        <span>
+            <input type="text" name="category" class="form-control" placeholder="category" value="<%= item.category %>" required>
+        </span>    
+    
+    
+        <label for="title"><strong> Film Title</strong></label>
+        <span>
+            <input type="text"  name="title" class="form-control" placeholder="title" value="<%= item.title %>" required>
+        </span>    
+    
+    
+        <label for="director"> <strong> Director</strong></label>
+        <span>
+            <input type="text" name="director" class="form-control" placeholder="director" value="<%= item.director %>" required>
+        </span>    
+    
+    
+        <label for="content"><strong>Details</strong></label>
+        <span>
+            <textarea name="content" class="form-control" placeholder="description" rows="4" required minlength="10" ><%= item.content %></textarea>
+        </span>    
+    
+    
+        <label for="image"><strong>Image URL</strong></label>
+        <span>
+            <input type="text" name="image" class="form-control" placeholder="enter image URL" value="<%= item.image %>" required>
+        </span>    
+    
+   
+        <label for="status"><strong>Status</strong> &nbsp; </label>
+        <span>
+            <input type="text" name="status" class="form-control" placeholder="enter status"value="<%= item.status %>" required>
+        </span>    
+    
+        <button class="button submit-btn ">Update Trade</button>
+    </div>    
+    
+
+
+
+</form>
+
+
+
+
+<%- include('../partials/footer.ejs')%>  
